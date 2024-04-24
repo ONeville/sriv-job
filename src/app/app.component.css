@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1040px;
+  background-color: gray;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.tab-view {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-link {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+.button-link::selection {
+  background-color: black;
+  color: white;
+}
