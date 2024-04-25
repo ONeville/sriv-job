@@ -1,0 +1,23 @@
+<div class="job-detail">
+    <div class="header">
+    <img [src]="jobDetail.companyLogo" alt="" srcset="" width="80" height="80" />
+    <div class="description">
+    <h2 class="title">{{jobDetail.title}}</h2>
+        <mat-chip-set>
+            @for(type of jobDetail.types; track type){
+                <mat-chip>{{type}}</mat-chip>
+            }
+            @for(industry of jobDetail.industries; track industry){
+                <mat-chip>{{industry}}</mat-chip>
+            }
+        </mat-chip-set>
+    </div>
+    </div>
+    <div class="detail">
+        <p><span>Publish date:</span> {{jobDetail.publishDate}}</p>
+        <p><span>Location:</span> {{jobDetail.location}}</p>
+        <p><span>Reference:</span> {{jobDetail.reference}}</p>
+        <p><span>Description:</span></p>
+        <div [innerHTML]="jobDetail.description"></div>
+    </div>
+</div>

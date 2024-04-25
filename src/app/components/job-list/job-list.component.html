@@ -1,0 +1,23 @@
+<div class="container">
+  @for (job of jobs; track job) {
+  <mat-list-item class="list-item">
+    <img [src]="job.companyLogo" matListItemIcon alt="" srcset="" width="80" height="80" />
+    <div class="header">
+      <div class="header-content">
+        <div matListItemTitle class="title" (click)="navigateToJobDetails(job)">{{job.title}}</div>
+        <div matListItemLine class="description">
+          <span>Company: {{job.companyName}}</span>
+          <span>Reference: {{job.reference}}</span>
+        </div>
+      </div>
+      @if(isListView){
+      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon"
+        (click)="addToFavorites(job)">
+        <mat-icon>star</mat-icon>
+      </button>
+      }
+    </div>
+
+  </mat-list-item>
+  }
+</div>

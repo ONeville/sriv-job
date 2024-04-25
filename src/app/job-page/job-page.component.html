@@ -1,0 +1,12 @@
+ <div class="tab-view">
+    <button mat-button (click)="navigateToJobs()">JOBS</button>
+    <button mat-button (click)="navigateToFavorites()">FAVORITES</button>
+ </div>
+ <div class="content-view">
+    @if(displayView === 'LIST'){
+        <app-job-list [jobs]="jobs" [isListView]="true" (onAddToFavorites)="addToFavorites($event)" (onViewDetails)="navigateToJobDetails($event)" />
+    }
+    @if(displayView === 'FAVORITES'){
+        <app-job-list  [jobs]="jobFavorites" [isListView]="false" (onViewDetails)="navigateToJobDetails($event)" />
+    }
+ </div>

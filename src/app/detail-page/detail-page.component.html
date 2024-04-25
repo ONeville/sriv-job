@@ -1,0 +1,12 @@
+<div>
+        <a href="/">
+              <mat-icon>home</mat-icon>  Back
+        </a>
+        @if(jobDetail){
+                
+                <app-job-detail [jobDetail]="jobDetail" />
+        } 
+        @else {
+                <p>job not found</p>
+        }
+</div>

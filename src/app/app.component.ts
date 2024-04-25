@@ -1,23 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { JobListComponent } from './job-list/job-list.component';
+import { JobService } from './services/job.service';
+import { Job } from './services/job.model';
+import { JobListComponent } from './components/job-list/job-list.component';
+import { JobDetailComponent } from './components/job-detail/job-detail.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, JobListComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'ng-job-search';
-  selectAll = true;
-
-  navigateToFavorites() {
-    this.selectAll = !this.selectAll;
-  }
-
-  navigateToJobs() {
-    this.selectAll = !this.selectAll;
-  }
 }

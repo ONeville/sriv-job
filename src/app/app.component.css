@@ -9,19 +9,3 @@
   padding-left: 20px;
   padding-right: 20px;
 }
-
-.tab-view {
-  display: flex;
-  justify-content: space-between;
-}
-
-.button-link {
-  text-decoration: none;
-  text-align: center;
-  color: black;
-  font-size: 20px;
-}
-.button-link::selection {
-  background-color: black;
-  color: white;
-}
